@@ -7,7 +7,9 @@
         <p>DOB: {{ person.birth_date }}</p>
         <p>Age: {{ person.age }}</p>
         <p>Birth City: {{ person.city_of_birth }}</p>
+        {% if user.is_authenticated %}
         <h4>Edit this person: <a class="btn btn-default" href="{% url 'demo_edit' pk=person.pk %}"><span class="glyphicon glyphicon-pencil"></span></a></h4>
+        {% endif %}
         <hr>
      <h3><a href="{% url 'demo_list' %}">Back to listing</a></h3>
     </div>

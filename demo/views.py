@@ -1,16 +1,20 @@
 from django.shortcuts import render, get_object_or_404, redirect
 from .models import Person
 from .forms import PersonForm
+from django.contrib.auth.decorators import login_required
 
 # Create your views here.
+@login_required
 def demo_list(request):
     people = Person.objects.order_by('unique_id')
     return render(request, 'demo/demo_list.html', {'people': people})
 
+@login_required
 def demo_detail(request, pk):
     person = get_object_or_404(Person, pk=pk)
     return render(request, 'demo/demo_detail.html', {'person': person})   
 
+@login_required
 def demo_new(request):    
     if request.method == "POST":
         form = PersonForm(request.POST)
@@ -24,6 +28,7 @@ def demo_new(request):
         form = PersonForm()
     return render(request, 'demo/demo_edit.html', {'form': form})
 
+@login_required
 def demo_edit(request, pk):
     person = get_object_or_404(Person, pk=pk)
     if request.method == "POST":
