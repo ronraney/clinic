@@ -23,3 +23,17 @@ def demo_new(request):
     else:
         form = PersonForm()
     return render(request, 'demo/demo_edit.html', {'form': form})
+
+def demo_edit(request, pk):
+    person = get_object_or_404(Person, pk=pk)
+    if request.method == "POST":
+        form = PersonForm(request.POST, instance=person)
+        if form.is_valid():
+            person = form.save(commit=False)
+            #post.author = request.user
+            #post.published_date = timezone.now()
+            person.save()
+            return redirect('demo_detail', pk=person.pk)
+    else:
+        form = PersonForm(instance=person)
+    return render(request, 'demo/demo_edit.html', {'form': form})

@@ -6,9 +6,7 @@
         <h4>{{ person.maiden_name }}</h4>
         <p>DOB: {{ person.birth_date }}</p>
         <p>Age: {{ person.age }}</p>
-        <p>Birth City: {{ person.city_of_birth }}</p>
-        <h4>Edit this person: <a class="btn btn-default" href="{% url 'demo_edit' pk=person.pk %}"><span class="glyphicon glyphicon-pencil"></span></a></h4>
-        <hr>
+        <p>Birth City: {{ person.city_of_birth }}</p><hr>
      <h3><a href="{% url 'demo_list' %}">Back to listing</a></h3>
     </div>
    

@@ -23,13 +23,17 @@
 h1 {
     font-family: 'Lobster', cursive;
 }
-
+a:hover{
+    text-decoration: none;
+}
 .date {
     color: #828282;
 }
 
 .save {
-    float: right;
+    clear: left;
+    padding: 10px 25px;
+    margin-top: 10px;
 }
 
 .post-form textarea, .post-form input {
@@ -51,6 +55,18 @@ h1 {
     text-decoration: none;
 }
 .person h3 a:hover {
-    font-family: 'Lobster', cursive;
-    font-size: 105%;
+    color: #ff9400;
+}
+.helptext {
+    color: #828282;
+}
+.back-link {
+    margin: 20px auto auto 20px;
+}
+.back-link a{
+    text-decoration: none;
+}
+form {
+    border: solid 1px #828282;
+    padding: 20px;
 }

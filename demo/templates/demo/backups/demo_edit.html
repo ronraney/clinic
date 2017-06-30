@@ -1,13 +1,9 @@
 {% extends 'demo/base.html' %}
 
 {% block content %}
-    <h1>Welcome!</h1>
-    <p>Please answer the following questions...</p>
+    <h1>New person</h1>
     <form method="POST" class="post-form">{% csrf_token %}
         {{ form.as_p }}
         <button type="submit" class="save btn btn-default">Save</button>
     </form>
-    <div class="row">
-    <h3 class="back-link"><a href="{% url 'demo_list' %}">Skip This - Back to listing</a></h3>
-    </div>
 {% endblock %}
