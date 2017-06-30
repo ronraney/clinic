@@ -6,7 +6,7 @@
     {% for person in people %}
         <div class="person">
             <div class="ID">
-                <h3><a href="">{{ person.unique_id }}</a></h3>
+                <h3><a href="{% url 'demo_detail' pk=person.pk %}">{{ person.unique_id }}</a></h3>
             </div>
             <h4>{{ person.maiden_name }}</h4>
             <p>{{ person.birth_date }}</p>

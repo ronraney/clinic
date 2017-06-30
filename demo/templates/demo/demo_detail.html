@@ -1,0 +1,13 @@
+{% extends 'demo/base.html' %}
+
+{% block content %}
+    <div class="person">
+        <h3>{{ person.unique_id }}</h3>
+        <h4>{{ person.maiden_name }}</h4>
+        <p>{{ person.birth_date }}</p>
+        <p>{{ person.age }}</p>
+        <p>{{ person.city_of_birth }}</p><hr>
+     <h3><a href="{% url 'demo_list' %}">Back to listing</a></h3>
+    </div>
+   
+{% endblock %}

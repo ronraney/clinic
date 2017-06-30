@@ -43,10 +43,14 @@ h1 {
     margin-right: 20px;
 }
 
-.post {
-    margin-bottom: 70px;
+.person {
+    margin-bottom: 20px;
 }
 
-.post h1 a, .post h1 a:visited {
-    color: #000000;
+.person h3 a, .person h3 a:visited, .person h3 a:hover{
+    text-decoration: none;
+}
+.person h3 a:hover {
+    font-family: 'Lobster', cursive;
+    font-size: 105%;
 }
