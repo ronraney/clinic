@@ -1,0 +1,17 @@
+{% extends 'demo/base.html' %}
+
+{% block content %}
+
+    <div><h2>Demographics Listing</h2>
+    {% for person in people %}
+        <div class="person">
+            <div class="ID">
+                <h3><a href="">{{ person.unique_id }}</a></h3>
+            </div>
+            <h4>{{ person.maiden_name }}</h4>
+            <p>{{ person.birth_date }}</p>
+            <p>{{ person.city_of_birth }}</p>
+        </div><hr>
+    {% endfor %}
+    </div>
+{% endblock %}

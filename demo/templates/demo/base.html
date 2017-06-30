@@ -1,0 +1,27 @@
+{% load staticfiles %}
+<html>
+
+<head>
+
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+<link rel="stylesheet" href="{% static 'css/demo.css' %}">
+<link href="//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+    <div class="page-header">
+        <img id="main-logo" src="{% static 'media/caich200.png' %}" />
+        <h1><a href="/">Screening Clinic</a></h1>
+    </div>
+    <div class="content container">
+        <div class="row">
+            <div>
+            {% block content %}
+            {% endblock %}
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
